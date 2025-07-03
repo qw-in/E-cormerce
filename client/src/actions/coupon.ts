@@ -33,6 +33,11 @@ export const protectCoupontFormAction = async () => {
                 status: 403,
             };
         }
+        return {
+            error: "Forbidden",
+            success: false,
+            status: 403,
+        };
     }
     return {
         success: true,

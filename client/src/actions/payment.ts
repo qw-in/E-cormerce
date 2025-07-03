@@ -42,6 +42,11 @@ export const paymentAction = async (email: string) => {
                 status: 403,
             };
         }
+        return {
+            error: "Forbidden",
+            success: false,
+            status: 403,
+        };
     }
 
     return {

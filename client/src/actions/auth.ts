@@ -42,6 +42,11 @@ export const protectSignupAction = async (email: string) => {
                 status: 403,
             };
         }
+        return {
+            error: "Forbidden",
+            success: false,
+            status: 403,
+        };
     }
     return {
         success: true,
@@ -75,6 +80,11 @@ export const protectSigninpAction = async (email: string) => {
                 };
             }
         }
+        return {
+            error: "Forbidden",
+            success: false,
+            status: 403,
+        };
     }
     return {
         success: true,
